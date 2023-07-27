@@ -1,6 +1,6 @@
-from pyamaze import maze,COLOR,agent
-
-m=maze(10,10)
-m.CreateMaze(theme=COLOR.light)
-a=agent(m)
+from pyamaze import maze,agent
+m=maze(20,20)
+m.CreateMaze(loopPercent=50)
+a=agent(m,filled=True,footprints=True)
+m.tracePath({a:m.path})
 m.run()
